@@ -1,0 +1,36 @@
+{
+  "id": "nutrition-during-treatment-safety-001",
+  "title": "Safety / not-medical-advice / red-flag policy specification",
+  "project": "nutrition-during-treatment",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "safety"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Nutrition-During-Treatment is an open-access, plain-language, source-cited library of nutrition guidance for people in active cancer treatment and their caregivers, synthesized only from authoritative bodies (NCI/PDQ, NHS, ESPEN, ACS, etc.). It is a HIGH risk-tier, patient-facing project under the binding cancer-domain guardrails: open-access/aggregate/de-identified data only, per-source license verification, and credentialed oncology-dietitian sign-off before any patient-facing content ships. The project does NOT give medical or personalized nutrition advice and must be engineered so it cannot be steered into doing so. This cold-start task writes the safety / not-medical-advice / red-flag policy that all later content and tooling must implement and be tested against, before any content is authored. No clinical partner or credentialed reviewer is yet secured.",
+  "objective": "Write the authoritative safety policy specification that all later content and pipeline checks implement and are tested against: the declined/out-of-scope set (personalized targets, dosing, drug-nutrient/herb-drug interaction judgments, diagnosis/triage, anti-cancer/cure-diet or supplement endorsement), the refuse-and-redirect-to-care-team behavior, the persistent 'not medical advice / talk to your care team' banner required on every patient-facing surface, the red-flag escalation-block template required on every symptom topic, the safety red-team taxonomy and 0-personalized/dangerous-leakage target, and the expert-review gate (oncology RDN/CSO on all content, oncologist on clinical surfaces, advocate on readability) with a fail-safe withhold-when-uncertain default.",
+  "acceptanceCriteria": [
+    "Enumerates the declined/out-of-scope set in concrete, testable terms: personalized calorie/protein/fluid targets or meal plans; supplement/dose recommendations; drug-nutrient or herb-drug interaction judgments; diagnosis/triage/'is this serious'; endorsement of anti-cancer/cure/alternative diets or supplements",
+    "Defines the refuse-and-redirect behavior: decline the individual question, provide the general cited information, route to the oncology dietitian/care team, and add the escalation block when the situation may be urgent",
+    "Specifies the persistent 'this is general education, not medical advice - talk to your care team/dietitian' banner required on every patient-facing surface (lint-enforced) and the red-flag escalation-block template required on every symptom/side-effect topic",
+    "Defines the safety red-team taxonomy (including the 'just give me a number', supplement-safety, interaction, triage, and cure-diet vectors, plus LLM-assisted drafting paths) and the 0 personalized/dangerous-leakage target",
+    "Mandates the expert sign-off gate (oncology RDN/CSO on all patient-facing content, oncologist on clinically-loaded surfaces, patient-advocate on readability) and the fail-safe 'withhold when citation or safety framing is uncertain' default",
+    "Reviewed and signed off by a credentialed oncology dietitian (RDN/RD-CSO) and an oncologist, recorded in the reviewers ledger"
+  ],
+  "resources": [
+    "planning/projects/nutrition-during-treatment/PLAN.md",
+    "CLAUDE.md",
+    "docs/good-deed-definition.md",
+    "packages/schema/src/schemas.ts",
+    "planning/ROADMAP.md",
+    "planning/projects/public-official-guide/PLAN.md"
+  ],
+  "output": "A reviewed safety-policy-specification document (the not-medical-advice / red-flag charter) defining the declined set, refuse-and-redirect behavior, the required banner and escalation-block templates, the safety red-team taxonomy, and the expert-review/withhold gates - the contract that the content schema (nutrition-during-treatment-schema-002), the pipeline gates (nutrition-during-treatment-pipeline-004), and the eval/red-team (nutrition-during-treatment-eval-013) implement and verify.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
