@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-audio-021",
+  "title": "Read-aloud audio / text-aligned narration of core topics",
+  "project": "nutrition-during-treatment",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "nutrition", "health", "accessibility", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Read-aloud audio narration of the core content topics extends reach to patients with low literacy, vision impairment, or who are too unwell to read during treatment. The audio content is patient-facing and carries the same riskTier:high classification as the underlying written content. The audio must faithfully represent the expert-reviewed written text, including the not-medical-advice banner and escalation blocks. Audio production must not introduce editorial changes that could alter clinical meaning. Text-audio alignment metadata enables screen-reader and cross-link compatibility.",
+  "objective": "Produce read-aloud audio narrations and text-aligned narration metadata for the core topic set. Audio must faithfully reproduce the expert-reviewed written content without editorial alteration. Not-medical-advice banner and escalation block audio must be included. Text-audio alignment data must be machine-readable for accessibility tools.",
+  "acceptanceCriteria": [
+    "Read-aloud audio narrations produced for all core side-effect topics and the safety/escalation content, faithful to the expert-reviewed written text without editorial alteration",
+    "Not-medical-advice banner and red-flag escalation blocks included in the audio narration for each topic; no omissions of safety-critical content",
+    "Text-audio alignment metadata produced in a machine-readable format (e.g., WebVTT, JSON timestamps) enabling synchronization with the written text on the static site",
+    "Audio quality sufficient for the intended use (clear narration, no background noise, appropriate pace for comprehension); tested for usability with a patient-advocate",
+    "Credentialed oncology RDN/CSO review confirms audio faithfully represents the approved written content without clinical meaning changes; sign-off recorded. Oncologist sign-off recorded for clinically-loaded narration segments. Patient-advocate sign-off for audio usability and pacing recorded",
+    "Audio dataset published in an open format (e.g., MP3/OGG) under CC-BY-4.0 with attribution metadata"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A read-aloud audio narration dataset for the core content topics with text-aligned timing metadata, verified as faithful to the expert-reviewed written content and published open access.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

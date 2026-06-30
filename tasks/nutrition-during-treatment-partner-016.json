@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-partner-016",
+  "title": "Secure distribution partner/steward + consented comprehension test with pilot patients",
+  "project": "nutrition-during-treatment",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "partnerships"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The project is not 'shipped on merge' — it is shipped only when real patients receive and use the content through a credible channel. No distribution partner or steward has yet been secured (verifiedNeed: false). The dated acquisition plan targets a secured partner by 2026-12-15. If no partner is secured by approximately 2027-03-31, the build-vs-mothball/pivot rule applies: contribute the expert-reviewed corpus to an existing trusted publisher as a reference deed, or mothball. Depends on nutrition-during-treatment-eval-013, nutrition-during-treatment-a11y-014, and nutrition-during-treatment-i18n-015.",
+  "objective": "Secure a distribution partner or steward (dietetics team, cancer-support nonprofit, hospital patient-education office, or advocacy org) and conduct a partner-mediated, consented, de-identified comprehension/teach-back test with pilot patients. Record the partner agreement, assign a steward, and flip verifiedNeed to true in the governance record. Confirm that safety/banner/escalation controls are intact in the distributed form.",
+  "acceptanceCriteria": [
+    "A real distribution channel is identified and secured: an infusion-center or cancer-center dietetics team, a cancer-support nonprofit (e.g., Cancer Support Community affiliate, Macmillan-style support service), a hospital patient-education office, or an oncology advocacy organization; steward assigned and recorded",
+    "Comprehension/teach-back test conducted with pilot patients through the partner: partner-mediated, fully consented, de-identified, aggregate data only; test items cover key content claims per topic and comprehension of the not-medical-advice boundary and escalation block",
+    "Comprehension test passes: at least 80% of pilot readers correctly answer key comprehension/teach-back items per tested topic; results documented",
+    "Safety/banner/escalation controls verified intact in the distributed form (e.g., print handout, web page, embedded patient-portal content); all shipped content has recorded oncology-dietitian and oncologist sign-off",
+    "Partner agreement, steward assignment, acquisition timeline (reviewer secured by 2026-10-15, partner by 2026-12-15), and build-vs-mothball/pivot decision rule documented; verifiedNeed governance record updated",
+    "No identifiable patient data collected or held by this project; comprehension/outcome data is partner-held under their IRB/governance, consented, de-identified, and aggregate"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A document recording the secured distribution partner, assigned steward, comprehension test results (aggregate, de-identified), verification that safety controls are intact in the distributed form, and updated governance record with verifiedNeed status.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

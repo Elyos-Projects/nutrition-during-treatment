@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-unproven-011",
+  "title": "Supplement/herb + unproven-diet caution content (evidence-based, defer-to-team)",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "misinformation"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Patients in cancer treatment frequently encounter online claims about supplements, herbs, and 'anti-cancer diets' (alkaline, ketogenic-as-therapy, juicing, extreme fasting, 'starve the tumor' claims). The project must address these directly and accurately without endorsing them or providing dosing/interaction advice. This caution content is HIGH risk because inaccurate or alarming framing can cause patients to stop eating adequately, abandon effective treatment, or take harmful doses. Depends on nutrition-during-treatment-sources-007 and nutrition-during-treatment-content-008. Content is education only — no dietary prescriptions or endorsements.",
+  "objective": "Author supplement/herb and unproven-diet caution content that accurately states, with citations, what authoritative bodies and evidence say about common supplements/herbs and unproven 'anti-cancer' diets. The content must not endorse, prescribe doses, or judge drug-herb interactions for individuals. It must emphasize eating enough, use a non-alarming tone, and route all individual supplement and diet questions to the pharmacist, dietitian, and care team.",
+  "acceptanceCriteria": [
+    "Content addresses common supplements/herbs (e.g., antioxidants, turmeric/curcumin, cannabis/CBD, mushroom supplements, high-dose vitamins) and unproven diets (alkaline, ketogenic-as-therapy, juicing/detox, extreme fasting, 'starve the tumor') by citing what authoritative bodies and published evidence actually show — not by endorsing or detailing the claims",
+    "Content explicitly does not endorse any supplement or unproven diet as anti-cancer or curative; does not recommend doses or brands; does not judge drug-herb or drug-nutrient interactions for individuals; all such individual questions are routed to the pharmacist, oncology dietitian, and care team",
+    "Tone is non-alarming and constructive: emphasizes that eating enough during treatment is a high priority; frames caution content as information to discuss with the care team, not as prohibition",
+    "Every claim cited to a license-verified authoritative source (oncology guidelines, NCI/PDQ, peer-reviewed evidence); citation-coverage CI gate passes; content passes grade 8 or below readability check",
+    "Not-medical-advice banner present; red-flag escalation block included where appropriate (e.g., for supplement interactions that may affect treatment efficacy); banner-lint and escalation-lint CI gates pass",
+    "Credentialed oncology RDN/CSO sign-off recorded; oncologist sign-off recorded for clinically-loaded claims (e.g., supplement-treatment interaction cautions); patient-advocate sign-off for tone and readability recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "Plain-language, evidence-cited, expert-signed-off caution content on supplements/herbs and unproven anti-cancer diets, written in a non-alarming defer-to-team style, merged into the content corpus and passing all CI gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

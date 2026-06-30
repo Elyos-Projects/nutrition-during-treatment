@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-questions-012",
+  "title": "Questions to ask your oncology dietitian / care team prompt lists",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The project's redirect-to-the-right-professional behavior is its ethical core. 'Questions to ask your oncology dietitian / care team' prompt lists are a safe, non-prescriptive mechanism to help patients prepare for dietitian and care team appointments. By framing individualized questions as conversation starters for the professional, the content drives appropriate use of expert care rather than attempting to answer individual questions itself. Depends on nutrition-during-treatment-content-008. These documents are patient-facing and therefore classified riskTier:high per project guardrails.",
+  "objective": "Author question-prompt lists aligned to each pilot topic and to general oncology nutrition care, designed to help patients and caregivers prepare for appointments with their oncology dietitian and care team. Lists must be plain-language, non-prescriptive, and reviewed by an oncology RDN/CSO and a patient-advocate. Content must include the not-medical-advice banner and must not answer the questions or provide individual guidance.",
+  "acceptanceCriteria": [
+    "Question-prompt lists produced for the pilot topics (nausea/vomiting, sore mouth/mucositis, taste and smell changes, appetite loss, bowel changes) and at least one general oncology nutrition care prompt list",
+    "All prompts are framed as questions for the patient to ask their oncology dietitian or care team; no prompt list answers the question or provides a prescriptive recommendation — it facilitates the professional conversation",
+    "Not-medical-advice banner present on every question-prompt document; documents include a brief framing note explaining how to use the prompt list with the care team",
+    "Content passes the grade 8 or below readability check; plain-language checklist passed; banner-lint CI gate passes",
+    "Credentialed oncology RDN/CSO sign-off recorded confirming the prompts are appropriate and safe to present to patients; oncologist sign-off recorded for any clinically-loaded prompts; patient-advocate sign-off recorded for tone and usability"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "Plain-language, RDN/CSO- and advocate-reviewed question-prompt lists for the pilot topics and general care, designed to help patients prepare for oncology dietitian and care team appointments, merged into the content corpus and passing all CI gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

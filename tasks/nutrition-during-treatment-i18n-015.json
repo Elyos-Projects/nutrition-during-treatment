@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-i18n-015",
+  "title": "Translation framework + first language (back-translation + bilingual sign-off)",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "translation"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Non-English-speaking patients are a priority underserved group for this project. Translation of patient-facing nutrition content is HIGH risk — a nuance shift or mistranslation can cause harm. This task is treated as a full clinical review cycle per language, not a string swap. Back-translation review and bilingual oncology RDN/advocate sign-off are required. Region-specific helplines and escalation contacts must be localized and verified for the target language/region. Depends on nutrition-during-treatment-content-008, nutrition-during-treatment-escalation-010, and nutrition-during-treatment-a11y-014.",
+  "objective": "Implement the translation framework (i18n directory structure, per-language provenance metadata including lastVerified/validUntil, back-translation workflow documentation) and complete the first language translation of the core content, with back-translation review, bilingual oncology RDN/advocate sign-off, cultural food-context adaptation notes, and localized/verified region-specific helplines and escalation contacts.",
+  "acceptanceCriteria": [
+    "Translation framework implemented: i18n directory structure, per-language content files, per-language source provenance metadata with lastVerified and validUntil fields, back-translation workflow documented",
+    "First language translation completed for all core content topics (five pilot side-effect topics plus safety banner and escalation blocks); back-translation review performed and documented — discrepancies resolved before sign-off",
+    "Cultural food-context adaptation notes recorded for the target language/region (e.g., regional staple foods, culturally relevant food preparation notes) where relevant to the content",
+    "Region-specific helplines, crisis lines, and authoritative-resource links localized and verified for the target language/region; helpline-verification check passes at zero stale entries for the translated content",
+    "Bilingual credentialed oncology RDN/CSO sign-off recorded for the full translated corpus; bilingual patient-advocate sign-off recorded for readability, tone, and cultural appropriateness",
+    "Oncologist sign-off recorded for any clinically-loaded translated content (food safety, escalation blocks); translated content does not introduce personalized advice, dietary prescriptions, or endorsements not present in the source"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the translation framework and the complete first-language translation of the core content corpus, with back-translation review, bilingual expert sign-off, cultural adaptation notes, and localized/verified escalation contacts.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

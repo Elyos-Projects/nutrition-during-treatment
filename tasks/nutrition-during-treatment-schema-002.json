@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-schema-002",
+  "title": "Content schema + provenance model + repo/CI skeleton (pnpm/TS/ESM)",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "infrastructure", "content"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Nutrition-During-Treatment requires a structured content schema and provenance model before any patient-facing topics are authored, so that every claim carries citations, reviewer sign-off, and staleness metadata. This is a cold-start M0 engineering task that establishes the pnpm/TS/ESM monorepo skeleton and CI pipeline with check stubs, providing the foundation that the pipeline (nutrition-during-treatment-pipeline-004) and all content tasks (M2+) build on. No clinical content is authored here; this is infrastructure only.",
+  "objective": "Implement the Markdown + YAML front-matter content schema with full provenance model fields, the pnpm/TS/ESM monorepo skeleton, and a CI pipeline that runs build/test/lint plus enforced stubs for citation-coverage, banner-lint, readability, and staleness checks. The stubs must be green on an empty or fixture corpus so subsequent milestones start with a passing baseline.",
+  "acceptanceCriteria": [
+    "Content schema defined (Markdown files with YAML front-matter): required fields include topic, audience, claims array (each claim with sources array, reviewStatus, reviewer, lastVerified, validUntil, riskFlags), banner slot, and escalation slot",
+    "Provenance model documented: each Source record carries source name, jurisdiction, exact citation, URL, retrieval date, verified reuse terms, reuse-mode (reproduce-allowed | cite-and-synthesize-only), lastVerified, validUntil",
+    "pnpm/TS/ESM monorepo skeleton created; pnpm build && pnpm test && pnpm lint pass on an empty or fixture corpus",
+    "CI pipeline runs build, test, lint plus stub implementations of citation-coverage check, banner-lint check, escalation-lint check, readability check, and staleness check — all stubs pass green on empty/fixture input",
+    "PR includes a fixture topic file demonstrating the schema with all required fields; README explains the schema fields and provenance model"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the pnpm/TS/ESM monorepo skeleton, the Markdown + YAML content schema and provenance model definition, and a CI pipeline with green stubs for all required content-quality gates, ready for the extraction pipeline (nutrition-during-treatment-pipeline-004) to implement the full checks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-nutrition-support-020",
+  "title": "Enteral/parenteral nutrition high-level explainer (defer-to-team)",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Enteral (tube feeding) and parenteral (IV nutrition) support are clinical interventions that belong entirely in the hands of the medical team — this project does not provide protocol guidance, formulation advice, or criteria for initiation. However, patients who are recommended these interventions may have basic questions about what they are. A tightly bounded high-level explainer (what is enteral nutrition, what is parenteral nutrition, when does the care team consider them) can reduce anxiety without overstepping clinical boundaries. Requires oncologist review. Content is education only — no protocols, prescriptions, or individual suitability judgments.",
+  "objective": "Author a tightly bounded high-level explainer of enteral and parenteral nutrition support: what these interventions are in plain language, the general clinical circumstances under which oncology teams consider them, and a strong defer-to-team framing. Does not provide initiation criteria, formulation details, calorie/protein targets, or home-management protocols.",
+  "acceptanceCriteria": [
+    "Content explains enteral nutrition (tube feeding) and parenteral nutrition (IV nutrition) at a plain-language, high-level awareness level: what they are, why the care team might recommend them, and the general process — cited to authoritative sources",
+    "Content is strictly bounded: does not provide initiation criteria, formulation or calorie/protein specifics, home-management instructions, or judgment on whether an individual patient needs nutrition support; all such decisions deferred to the oncology team and dietitian",
+    "Not-medical-advice banner present; red-flag escalation block included (e.g., if experiencing severe swallowing difficulty, persistent inability to eat, or significant weight loss, contact the care team); banner-lint and escalation-lint CI gates pass",
+    "Every claim cited to a license-verified source; citation-coverage CI gate passes; content passes grade 8 or below readability check; staleness check passes",
+    "Credentialed oncologist sign-off recorded (required due to clinical nature of nutrition support); credentialed oncology RDN/CSO sign-off recorded; patient-advocate sign-off for tone and readability recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A tightly bounded, plain-language, oncologist- and RDN/CSO-signed-off high-level explainer of enteral and parenteral nutrition support, with a strong defer-to-team message, merged into the content corpus and passing all CI gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

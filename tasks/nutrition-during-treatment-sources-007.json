@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-sources-007",
+  "title": "Vet + record provenance/license for pilot-topic sources",
+  "project": "nutrition-during-treatment",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "licensing", "provenance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before any pilot-topic content is authored in M2, every source that may inform that content must have its reuse terms verified and recorded in the source registry established by nutrition-during-treatment-licensing-003. This task completes the per-source provenance entries for the specific sources that will be used for the pilot topics (nausea/vomiting, sore mouth/mucositis, taste changes, appetite loss, diarrhea/constipation). No source informs shipped content until this step is done. Depends on nutrition-during-treatment-scope-000, nutrition-during-treatment-licensing-003, and nutrition-during-treatment-pipeline-004. riskTier is high due to legal and clinical sensitivity of unlicensed source use.",
+  "objective": "For each authoritative source that will inform the pilot-topic content, verify its reuse terms against the license-verification protocol, record the full provenance entry (source, jurisdiction, citation, version/year, URL, retrieval date, legal-status note, lastVerified, validUntil, reuse-mode), and obtain sign-off before that source is enabled for content authoring.",
+  "acceptanceCriteria": [
+    "Reuse terms verified and recorded for every source proposed for use in the pilot topics; each registry entry includes source name, jurisdiction, URL to the license/terms page, quoted or paraphrased reuse terms, reuse-mode assignment, retrieval date, legal-status note, lastVerified, and validUntil",
+    "Only sources whose reuse terms are verified and recorded are enabled (flagged active) in the registry; any source without a verified entry remains disabled for content use",
+    "Provenance entries distinguish reproduce-allowed sources (NCI/PDQ public domain, NHS OGL) from cite-and-synthesize-only sources (ACS, ESPEN, ASPEN, ASCO, Academy, WCRF, Macmillan, CRUK, WHO, NICE) for each pilot-topic entry",
+    "Registry dataset is machine-readable (YAML or JSON) and consumed by the pipeline license-check gate from nutrition-during-treatment-pipeline-004",
+    "Reviewed and signed off by the project maintainer and a credentialed oncology RDN/CSO confirming source coverage is sufficient and appropriate for the pilot topics; sign-off recorded",
+    "No patient-facing content is authored or merged for the pilot topics until this source-vetting dataset is merged and approved"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "An updated source registry dataset with full provenance and verified license entries for all pilot-topic sources, ready to be consumed by the pipeline license-check gate, enabling M2 content authoring to proceed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

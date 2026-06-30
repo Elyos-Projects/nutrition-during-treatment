@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-handoff-017",
+  "title": "Distribution + closed-loop outcome (patients use it; attested help recorded)",
+  "project": "nutrition-during-treatment",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "outcomes"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "This is the project's Definition of Shipped: real patients receive and use the content through the secured partner channel and it demonstrably helps them manage a treatment side effect or eat better during treatment. Success is measured as outcomes delivered to real beneficiaries, not tasks merged or pages published. All oncology-dietitian and oncologist sign-off must be recorded and content must be within its review window. Depends on nutrition-during-treatment-partner-016.",
+  "objective": "Distribute the content to real patients through the secured partner channel and record that it helped them. Collect at least 10 attested instances of the content helping someone manage a side effect or eat better during treatment, via partner-mediated, consented, de-identified outcome capture. Verify safety and provenance controls in production.",
+  "acceptanceCriteria": [
+    "Content distributed to real patients in active cancer treatment through the secured distribution partner channel",
+    "At least 10 attested instances recorded of the content helping a patient manage a treatment-related nutrition side effect or eat better during treatment; all outcome records are partner-mediated, fully consented, de-identified, and aggregate — no identifiable data held by this project",
+    "Safety/red-flag/banner controls verified intact and functioning in the production/distributed form; the not-medical-advice banner and escalation blocks confirmed visible and correctly rendered in the distributed format",
+    "All distributed content has recorded oncology-dietitian (RDN/RD-CSO) sign-off and oncologist sign-off where required; no content past its validUntil window served to patients",
+    "Provenance intact in all distributed forms: citations visible or accessible; source registry current; helplines verified within re-verification cadence",
+    "Outcomes and distribution reach documented in the project's governance record; project-level Definition of Shipped affirmed by the steward and oncology-dietitian reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A governance document recording distribution to real patients, at least 10 attested (partner-mediated, de-identified) instances of the content helping patients manage treatment-related nutrition challenges, verification of safety/provenance controls in production, and affirmation of the project Definition of Shipped.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

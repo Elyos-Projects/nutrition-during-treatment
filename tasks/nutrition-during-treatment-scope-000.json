@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-scope-000",
+  "title": "Pilot topic-set + reviewer-profile selection (gates M2-M6)",
+  "project": "nutrition-during-treatment",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Nutrition-During-Treatment is an open-access, plain-language, source-cited library of nutrition guidance for people in active cancer treatment and their caregivers. This is the first M0 scoping decision that gates all content milestones (M2-M6). No clinical partner or credentialed reviewer is yet secured. A dated acquisition plan targets: ≥ 3 candidate oncology RDN/CSO reviewers and ≥ 2 candidate distribution partners in active conversation by 2026-08-15; reviewer secured by 2026-10-15 (gates M2); distribution partner by 2026-12-15 (gates M5).",
+  "objective": "Select and record the pilot topic set and reviewer profile that govern the scope of M2-M6 content work. Score side-effect topics for high patient impact and lowest clinical risk first. Fix the jurisdiction/licensing base for reproduced text (US/NCI-PDQ public domain vs UK/NHS OGL). Record the 2026-08-15 decision deadline and the governance rule: if no oncology-dietitian reviewer is secured by the M2 entry date, M2 content work does not start.",
+  "acceptanceCriteria": [
+    "Pilot topic set selected and recorded (proposed: nausea/vomiting, sore mouth/mucositis, taste and smell changes, appetite loss, diarrhea/constipation), scored against patient-impact and clinical-risk criteria; food-safety/neutropenia and cachexia explicitly deferred to M3 under oncologist review with rationale",
+    "Reviewer profile fixed: credentialed oncology RDN/CSO for all content, oncologist for clinically-loaded surfaces, patient-advocate for readability and tone — roles, required credentials, and COI-recusal policy recorded",
+    "Jurisdiction and licensing base decided: anchor for reproduced text (US NCI/PDQ public domain vs UK NHS OGL) chosen and recorded with rationale per the licensing gate",
+    "Decision deadline of 2026-08-15 recorded; governance rule documented — if oncology-dietitian reviewer not secured by M2 entry date, M2 content work pauses",
+    "Document merged and accessible as the canonical scope record that M2-M6 tasks reference; specific reviewer still marked TO BE SECURED"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A scope-and-reviewer-profile decision document recording the chosen pilot topic set (with scoring rationale), the three-reviewer model with required credentials and COI policy, the chosen jurisdiction/licensing base, and the dated governance milestones and decision rules that gate M2-M6.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
