@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-escalation-010",
+  "title": "Red-flag escalation blocks + verified helplines/crisis and authoritative-resource links",
+  "project": "nutrition-during-treatment",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "safety", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Every symptom and side-effect topic in the corpus must carry a verified red-flag escalation block routing to care team or emergency care when appropriate. Helpline, crisis, and authoritative-resource links (e.g., poison control for supplement overdose, distress/crisis lines, official patient-info portals) must be verified against their official sources within the review window. Stale or incorrect helpline numbers are a patient-safety risk. This task depends on nutrition-during-treatment-safety-001 and nutrition-during-treatment-content-008 and provides the verified escalation dataset consumed by all content.",
+  "objective": "Produce the verified escalation-block templates and helpline/resource link dataset. Every symptom/side-effect topic must have a clinically-reviewed red-flag block. All helpline, crisis, and authoritative-resource links must be verified against official sources, recorded with verification date and validUntil, and the helpline-verification CI check must pass at zero stale entries. Establish the shorter re-verification cadence for helpline data.",
+  "acceptanceCriteria": [
+    "Verified red-flag escalation block defined and applied to every symptom/side-effect topic: specific warning signs enumerated per topic (e.g., inability to keep fluids down, signs of dehydration, fever during low-count periods, rapid or significant weight loss, severe mucositis affecting eating) with explicit routing to care team during business hours or emergency care when urgent",
+    "Helpline and authoritative-resource links dataset compiled: poison control lines (by region), distress/crisis lines, official patient-information portals — each entry includes source URL, phone number or link, region, verification date, validUntil, and the official source used for verification",
+    "All helpline/crisis links verified against their official source within the current review window; helpline-verification CI check passes at zero stale or unverified entries",
+    "Re-verification cadence defined and recorded for helpline entries (shorter than clinical guideline cadence, e.g., every 3 months); cadence enforced via validUntil values and the staleness check",
+    "Escalation blocks and helpline dataset reviewed and signed off by a credentialed oncologist (for clinical red-flag content) and a credentialed oncology RDN/CSO; sign-off recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A verified escalation-block template library and helpline/resource link dataset (structured YAML or JSON), with all entries verified against official sources, consumed by the content CI gates and rendered in every symptom/side-effect topic.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

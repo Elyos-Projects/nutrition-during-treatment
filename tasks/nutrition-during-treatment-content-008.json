@@ -1,0 +1,34 @@
+{
+  "id": "nutrition-during-treatment-content-008",
+  "title": "Core side-effect content (nausea, sore mouth, taste, appetite, bowel changes), cited + reviewed",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "This is the first patient-facing content milestone: the pilot side-effect topics (nausea/vomiting, sore mouth/mucositis, taste and smell changes, appetite loss, diarrhea/constipation) authored as plain-language, source-cited education under the full safety policy, with oncology-dietitian sign-off required before any topic is merged. Depends on nutrition-during-treatment-safety-001, nutrition-during-treatment-pipeline-004, nutrition-during-treatment-readability-006, nutrition-during-treatment-sources-007, and the kill-gate (nutrition-during-treatment-eval-013a) confirming the grounded+cited approach is viable. Content is education only — no personalized advice or dietary prescriptions.",
+  "objective": "Author the five pilot side-effect nutrition topics as plain-language documents: nausea/vomiting, sore mouth/mucositis, taste and smell changes, appetite loss, and diarrhea/constipation. Each topic must meet the full safety policy: plain language at or below grade 8, every claim cited to a license-verified source, the not-medical-advice banner present, a red-flag escalation block present, non-prescriptive framing, and oncology RDN/CSO sign-off recorded. Content is general education; no personalized targets, dosing, or interaction advice.",
+  "acceptanceCriteria": [
+    "Each of the five pilot topics (nausea/vomiting, sore mouth/mucositis, taste and smell changes, appetite loss, diarrhea/constipation) authored as a complete document meeting the content schema from nutrition-during-treatment-schema-002",
+    "Every claim in every topic is cited to a license-verified source recorded in the registry from nutrition-during-treatment-sources-007; the citation-coverage CI gate passes for all five topics",
+    "Each topic carries the required 'This is general education, not medical advice — talk to your oncology care team / dietitian' banner and a verified red-flag escalation block appropriate to the topic; banner-lint and escalation-lint CI gates pass",
+    "All five topics pass the readability check at grade 8 or below and the plain-language checklist from nutrition-during-treatment-readability-006",
+    "Content is non-prescriptive throughout: no personalized calorie, protein, or fluid targets; no supplement doses; no drug-nutrient or herb-drug interaction judgments; no cure, anti-cancer diet, or supplement endorsements; misinformation addressed only by citing what authoritative evidence shows and deferring to the care team",
+    "Credentialed oncology dietitian (RDN/RD-CSO) sign-off recorded for every topic before merge; oncologist sign-off recorded for any clinically-loaded statement within any topic; patient-advocate readability sign-off recorded",
+    "Kill-gate (nutrition-during-treatment-eval-013a) re-confirmed passing on this real cited content before M3 work begins"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "Five plain-language, source-cited, oncology-dietitian-signed-off nutrition education documents for the pilot side-effect topics, merged into the content corpus and passing all CI gates (citation-coverage, license, banner-lint, escalation-lint, readability, staleness).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

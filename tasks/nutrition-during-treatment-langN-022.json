@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-langN-022",
+  "title": "Additional language translations",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "translation"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After the first language is completed via nutrition-during-treatment-i18n-015, additional language translations expand reach to underserved non-English-speaking patient populations. Each additional language is treated as its own HIGH-risk clinical review cycle — back-translation review, bilingual oncology RDN/advocate sign-off, cultural food-context adaptation, and localized/verified escalation contacts per language. This backlog task is a template/umbrella for each additional language. It is explicitly out of MVP scope and follows after the pilot language proves the translation workflow.",
+  "objective": "For each additional language beyond the first: translate the complete content corpus, perform back-translation review, obtain bilingual oncology RDN/advocate sign-off, document cultural food-context adaptation notes, localize and verify region-specific helplines and escalation contacts, and set per-language lastVerified/validUntil metadata. Each language is treated as HIGH risk, not a string swap.",
+  "acceptanceCriteria": [
+    "Complete translation of the content corpus for each additional language, including all pilot side-effect topics, safety/escalation content, not-medical-advice banner, and escalation blocks",
+    "Back-translation review performed for each language: source content translated to target language by a bilingual translator, then translated back to the source language by a separate bilingual reviewer; discrepancies resolved before sign-off",
+    "Cultural food-context adaptation documented per language/region: regional staple foods noted, culturally relevant framing applied, no imposition of food norms inappropriate to the target culture",
+    "Region-specific helplines, crisis lines, and escalation contacts localized and verified for the target language/region; helpline-verification check passes at zero stale entries for each language",
+    "Per-language lastVerified and validUntil metadata set; staleness fail-safe applies per language independently of the English corpus",
+    "Bilingual credentialed oncology RDN/CSO sign-off recorded for each additional language; bilingual patient-advocate sign-off for readability and cultural appropriateness recorded; oncologist sign-off for clinically-loaded content recorded; no personalized advice or dietary prescriptions introduced in translation"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "Per-language translation corpus files with back-translation review documentation, bilingual expert sign-off records, cultural adaptation notes, and verified localized escalation contacts — one complete package per additional language.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

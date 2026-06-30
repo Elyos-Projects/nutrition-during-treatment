@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-foodsafety-009",
+  "title": "Food safety + neutropenia content (reflects evolved guidance)",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "food-safety"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Food safety during cancer treatment — and specifically the guidance around neutropenia — is a clinically sensitive area where published guidance has evolved significantly. The historically strict 'neutropenic diet' has been substantially walked back in recent evidence, but many patients and caregivers still encounter the old guidance online. This topic requires oncologist review in addition to oncology RDN/CSO review. Depends on nutrition-during-treatment-sources-007 and nutrition-during-treatment-content-008. Content is education only — no personalized advice or dietary prescriptions.",
+  "objective": "Author food safety and neutropenia nutrition content that accurately reflects current evidence, including the evolution of guidance on the neutropenic diet. The document must be cited to current authoritative sources, oncologist-reviewed, carry the not-medical-advice banner, include a red-flag escalation block (including neutropenic-fever guidance routing to care team / emergency care), and not give personalized dietary prescriptions.",
+  "acceptanceCriteria": [
+    "Content reflects current evidence on food safety during cancer treatment, including the evidence-based walk-back of the strict 'neutropenic diet'; citations to current authoritative sources (dated within validity window) provided for all claims",
+    "Document carries the 'not medical advice / talk to your care team / dietitian' banner and a red-flag escalation block specific to neutropenia (e.g., when to call the care team for fever during low-count periods, signs of infection); banner-lint and escalation-lint CI gates pass",
+    "Content is non-prescriptive: presents general guidance from authoritative bodies; does not prescribe individual food lists, hygiene protocols as personal prescriptions, or tell the reader whether their specific situation warrants food restrictions; defers all individualized decisions to the oncology team",
+    "Credentialed oncologist sign-off recorded (required for this clinically-loaded surface); credentialed oncology RDN/CSO sign-off recorded; patient-advocate readability sign-off recorded",
+    "Document passes the grade 8 or below readability check and citation-coverage CI gate; staleness check passes (sources within validUntil)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A plain-language, source-cited, oncologist- and RDN/CSO-signed-off food safety and neutropenia nutrition education document that accurately reflects current evidence, with required safety banner and escalation block, merged into the content corpus and passing all CI gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

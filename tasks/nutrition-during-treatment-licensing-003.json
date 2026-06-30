@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-licensing-003",
+  "title": "Source registry + per-source license-verification protocol",
+  "project": "nutrition-during-treatment",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "licensing", "compliance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Most authoritative patient-nutrition content is copyrighted (ACS, ESPEN, ASPEN, ASCO, Academy, WCRF, Macmillan, Cancer Research UK, and much of NICE). The project's central licensing rule is synthesize-and-cite, never republish copyrighted text. This M0 task establishes the registry of authoritative sources with verified reuse terms and a protocol so that no source informs shipped content until its license is verified and recorded. WHO's CC BY-NC-SA 3.0 IGO is specifically flagged as incompatible with CC-BY reproduction. This task is riskTier:high because an unverified license informs copyright exposure and legal liability.",
+  "objective": "Establish the source registry schema and document, with verified reuse terms, for the initial set of authoritative bodies. Define the reuse-mode taxonomy (reproduce-allowed vs cite-and-synthesize-only) and the protocol requiring every source to be verified and recorded before its content informs anything that ships. Implement the registry as a structured data file that the pipeline license-check gate can consume.",
+  "acceptanceCriteria": [
+    "Registry schema defined per source: name, jurisdiction, URL, verified reuse terms (quoted from the source's license page), reuse-mode (reproduce-allowed | cite-and-synthesize-only), retrieval date, legal-status note",
+    "Reuse terms verified and recorded for the initial authoritative bodies: NCI/PDQ (US Govt public domain → reproduce-allowed with attribution), NHS/nhs.uk (Open Government Licence v3.0 → reproduce-allowed with OGL attribution), WHO (CC BY-NC-SA 3.0 IGO → cite-and-synthesize-only; incompatible with CC-BY reproduction), ACS, ESPEN, ASPEN, ASCO/Cancer.Net, Academy of Nutrition and Dietetics, WCRF/AICR, Macmillan, Cancer Research UK, NICE (all copyrighted → cite-and-synthesize-only)",
+    "Central rule stated and actionable: synthesize original plain-language text and cite; reproduce wording only from reproduce-allowed sources with required attribution; no source informs shipped content until verified and recorded in the registry",
+    "Protocol document specifies the process for adding new sources: research the license page, quote the reuse terms, assign reuse-mode, record retrieval date, and have the entry reviewed before the source is enabled",
+    "Reviewed and approved by the project maintainer and an oncology RDN/CSO (for clinical-source coverage); oncology-dietitian review recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A source registry file (e.g., sources/registry.yaml or registry.json) with verified license entries for the initial authoritative bodies, plus a license-verification protocol document defining the process for adding new sources and the synthesize-and-cite rule that all pipeline checks enforce.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

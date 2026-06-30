@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-ops-018",
+  "title": "Review cadence + maintenance rotation + outcomes dashboard + topic/language expansion process",
+  "project": "nutrition-during-treatment",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "governance", "sustainability"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the project reaches its Definition of Shipped (nutrition-during-treatment-handoff-017), it must be sustainably maintained. Oncology nutrition guidance changes (the neutropenic-diet reversal is the canonical example), and content past its review window must be flagged or withheld. Helplines require a shorter re-verification cadence. Outcomes (patients reached, attested help, comprehension results) must be tracked, not page views. The expansion process for adding new topics or languages must be expert-gated. Depends on nutrition-during-treatment-handoff-017.",
+  "objective": "Define and document the post-delivery maintenance structure: the review cadence enforced at runtime via lastVerified/validUntil, the named maintenance rotation, the outcomes dashboard (patients reached + attested help + comprehension results), and the documented expert-gated process for adding new topics and languages. Ensure the safety red-team is maintained as living tests.",
+  "acceptanceCriteria": [
+    "Review cadence defined and documented: per-source-type re-verification intervals (e.g., clinical guidelines annually, helplines/escalation contacts more frequently); cadence enforced at runtime via validUntil values triggering the staleness fail-safe before content past its window reaches patients",
+    "Named maintenance rotation defined: at least one person responsible for the pipeline and corpus; at least one designated safety/red-team reviewer; oncology RDN/CSO reviewer identified for re-sign-off; contact information and rotation schedule recorded in governance",
+    "Outcomes dashboard documented and implemented: tracks patients reached through the partner channel, attested instances of help (partner-mediated, de-identified), and comprehension test results per topic; explicitly excludes page views as a metric",
+    "Expert-gated topic and language expansion process documented: new topics require the same M2-M3 workflow (safety policy check, sources vetted, pilot content, RDN/CSO sign-off, oncologist sign-off where clinical, advocate review, eval/red-team pass); new languages require back-translation + bilingual sign-off; no expansion bypasses the gate",
+    "Safety red-team maintained as living CI tests: process documented for adding new adversarial vectors as new misuse patterns are identified; re-verification of red-team coverage included in the review cadence",
+    "Reviewed by the project maintainer, the steward, and an oncology RDN/CSO; all three sign-offs recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A governance and maintenance document defining the review cadence, maintenance rotation, outcomes dashboard, and expert-gated expansion process, ensuring the project remains accurate, safe, and sustainably maintained after initial delivery.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

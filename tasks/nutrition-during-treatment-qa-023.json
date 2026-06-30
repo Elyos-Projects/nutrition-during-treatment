@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-qa-023",
+  "title": "Guardrailed Q&A surface (future; inherits safety layer)",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "nutrition", "health", "infrastructure", "safety"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "A guardrailed Q&A surface that allows patients to ask free-text questions is an explicit future item, out of MVP scope. It requires a separate go/no-go decision and must fully inherit the safety layer: the refused/declined set (personalized advice, dosing, interactions, triage, cure-diet endorsement), the refuse-and-redirect-to-care-team behavior, the not-medical-advice banner, and the safety red-team at zero leakage. This task must not be started until the content corpus, full eval, and safety red-team (M4) are all green, and a separate explicit governance decision authorizes it.",
+  "objective": "If and when a governance go/no-go decision authorizes a Q&A surface: implement a guardrailed free-text Q&A surface that fully inherits the safety policy from nutrition-during-treatment-safety-001, routes all out-of-scope questions to the care team, serves only source-grounded cited content within the not-medical-advice boundary, and passes the full safety red-team at zero personalized/dangerous leakage.",
+  "acceptanceCriteria": [
+    "Separate explicit governance go/no-go decision documented and recorded before any work on this task begins; task is blocked until that decision is made and affirmative",
+    "Q&A surface fully inherits the safety policy: refused/declined set enforced (personalized calorie/protein/fluid targets, supplement doses, drug-nutrient or herb-drug interaction judgments, diagnosis/triage, cure-diet/supplement endorsements), refuse-and-redirect-to-care-team behavior implemented for all out-of-scope inputs",
+    "Not-medical-advice banner and escalation block present in every Q&A response; no response provides personalized advice or dietary prescriptions regardless of how the question is framed",
+    "Responses grounded exclusively in the expert-reviewed, cited content corpus; no blank-slate or ungrounded generation; citation shown for every substantive claim in responses",
+    "Full safety red-team suite (from nutrition-during-treatment-eval-013) passes at zero personalized/dangerous leakage on the Q&A surface; adversarial prompts including 'just give me a number', supplement-safety, interaction, triage, and cure-diet vectors all produce correct refuse-and-redirect behavior",
+    "Credentialed oncology RDN/CSO review and oncologist review of the Q&A surface behavior recorded before any patient-facing deployment; safety reviewer sign-off recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the guardrailed Q&A surface, gated on an explicit governance go/no-go decision, fully inheriting the safety layer, and passing the full safety red-team at zero personalized/dangerous leakage.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

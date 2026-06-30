@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-eval-013a",
+  "title": "Minimal grounded-vs-blank-slate + safety kill-gate (a few fixtures)",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "evaluation", "safety"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before investing in HIGH-tier content (M2), the project requires an early go/no-go that validates the source-grounded+cited approach clearly beats blank-slate generation on accuracy, groundedness, and safety. This minimal kill-gate at M1 runs against a small number of fixture topics, providing a lightweight thesis check before the more comprehensive full eval in M4 (nutrition-during-treatment-eval-013). Depends on nutrition-during-treatment-pipeline-004.",
+  "objective": "Implement a minimal evaluation harness that runs a couple of fixture topics through the source-grounded+cited pipeline versus a blank-slate baseline, reports accuracy/groundedness/readability and a basic safety check, and asserts that the grounded+cited approach clearly beats the baseline. If the kill-gate fails, HIGH-tier M2 content investment pauses for review before proceeding.",
+  "acceptanceCriteria": [
+    "Eval harness implemented: runs at least two fixture topics through source-grounded+cited pipeline and through a blank-slate baseline; compares accuracy, groundedness/citation coverage, readability (grade level), and a basic safety check",
+    "Safety check asserts the grounded+cited path does not produce personalized targets, dosing, interaction judgments, or pro-misinformation output on the fixture inputs",
+    "Kill-gate condition documented and enforced: if source-grounded+cited+safe does not clearly beat blank-slate on the fixture set, a CI signal (exit code, flag, or explicit FAIL output) halts M2 content investment pending review",
+    "Eval results (per fixture, aggregate delta) printed to stdout in a human-readable format; harness runs in pnpm test or via a dedicated pnpm eval script",
+    "Reviewed and signed off by the project maintainer and an oncology RDN/CSO (for validation of the fixture content and safety check scope); sign-off recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the minimal eval harness with grounded-vs-blank-slate comparison and safety kill-gate on a small fixture set, plus documentation of the go/no-go rule that gates M2 content investment.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-pediatric-024",
+  "title": "Pediatric oncology nutrition (separate review profile)",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "pediatrics"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Pediatric oncology nutrition is explicitly out of MVP scope due to higher clinical stakes, a distinct reviewer profile (pediatric-oncology RDN rather than adult-oncology RDN), and different authoritative sources and guidelines. Children in cancer treatment have different nutritional needs, growth considerations, and family/caregiver dynamics than adults. This backlog task is deferred until the adult corpus is stable, the adult review workflow is proven, and a pediatric-oncology RDN reviewer can be secured separately. Content is education only — no personalized advice or dietary prescriptions.",
+  "objective": "Author pediatric oncology nutrition education content covering nutrition challenges common in children undergoing cancer treatment. Content must use a distinct, separate pediatric-oncology RDN review profile, cite pediatric-specific authoritative sources, and be appropriately scoped for caregivers and families rather than adult patients reading for themselves.",
+  "acceptanceCriteria": [
+    "Content is authored for the caregiver/family audience of children in active cancer treatment; uses age-appropriate framing for pediatric contexts; cites pediatric-oncology authoritative sources (e.g., Children's Oncology Group, pediatric-specific ESPEN/ASPEN guidance, NCI pediatric cancer pages)",
+    "Content covers the most common nutritional challenges in pediatric cancer treatment (e.g., nausea, appetite loss, feeding difficulties, weight maintenance in growing children) at a plain-language, non-prescriptive level",
+    "Content is non-prescriptive: does not prescribe calorie, protein, or micronutrient targets for an individual child; does not recommend specific supplements or formulas; routes all individualized nutrition decisions to the pediatric oncology dietitian and team",
+    "Not-medical-advice banner and red-flag escalation blocks present (adapted for pediatric/caregiver context); escalation blocks include specific pediatric warning signs (e.g., failure to thrive, severe feeding refusal, significant weight loss in a child); banner-lint and escalation-lint CI gates pass",
+    "Every claim cited to license-verified pediatric-oncology authoritative sources; citation-coverage CI gate passes; content passes grade 8 or below readability check (for caregiver audience); staleness check passes",
+    "Credentialed pediatric-oncology dietitian (RDN with pediatric oncology specialization) sign-off recorded — a separate, distinct reviewer from the adult-oncology RDN; pediatric oncologist sign-off recorded; parent/caregiver-advocate sign-off for usability and tone recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "Plain-language, source-cited, pediatric-oncology-dietitian- and pediatric-oncologist-signed-off nutrition education content for caregivers of children in cancer treatment, with appropriate pediatric framing, merged into the content corpus and passing all CI gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

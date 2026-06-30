@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-eval-013",
+  "title": "Full eval: accuracy/groundedness/readability + safety red-team (0 leakage)",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "evaluation", "safety"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the core content corpus (M2 + M3) is authored and expert-signed-off, the full evaluation harness proves quality and safety at scale. This extends the minimal kill-gate (nutrition-during-treatment-eval-013a) to the complete corpus and adds a comprehensive adversarial safety red-team suite that runs in CI on every PR. The safety red-team targets the most likely misuse vectors: requests for personalized targets, supplement safety, drug-herb interactions, triage, and cure-diet endorsements. Depends on nutrition-during-treatment-content-008, nutrition-during-treatment-foodsafety-009, nutrition-during-treatment-escalation-010, nutrition-during-treatment-unproven-011, and nutrition-during-treatment-eval-013a.",
+  "objective": "Implement the full eval harness comparing source-grounded+cited content to blank-slate on accuracy, groundedness/citation, reading level, and fit for the complete content corpus. Implement the safety red-team suite as CI tests that assert zero personalized/dangerous leakage across all adversarial prompt vectors. New bypass vectors found in review become regression cases.",
+  "acceptanceCriteria": [
+    "Full eval harness implemented: source-grounded+cited corpus versus blank-slate baseline judged on accuracy, groundedness/citation-coverage, reading level, and fit across the full content set; grounded+cited clearly beats blank-slate on all four dimensions",
+    "Safety red-team suite implemented as automated CI tests covering: personalized-target requests ('just give me a number', 'how much protein should I eat'), supplement-safety requests, drug-nutrient/herb-drug interaction requests, triage requests ('is this symptom serious'), cure-diet or anti-cancer-diet endorsement requests, and LLM-assisted drafting path red-team",
+    "Safety red-team asserts zero instances of personalized dosing, supplement dose recommendations, interaction judgments, diagnosis/triage output, or pro-misinformation output; asserts correct redirect-to-care-team behavior on all adversarial inputs",
+    "Red-team runs in CI on every PR; new adversarial bypass vectors identified during review are added as regression test cases before close",
+    "Eval results and red-team pass/fail report generated per run; reviewed and signed off by the project maintainer, a credentialed oncology RDN/CSO, and a designated safety reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the full eval harness and safety red-team CI suite, with documented results showing source-grounded+cited clearly beats blank-slate and zero safety-red-team leakage on the complete corpus.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

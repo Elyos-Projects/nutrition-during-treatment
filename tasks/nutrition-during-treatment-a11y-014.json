@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-a11y-014",
+  "title": "WCAG 2.2 AA site + machine-readable corpus + print/large-print handouts",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "nutrition", "health", "accessibility", "infrastructure"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The project targets patients who include people with lower health literacy, older adults, people with visual or motor impairments, and people accessing content during chemotherapy infusion. Accessibility is not optional. This M4 task produces the WCAG 2.2 AA static site, the machine-readable corpus (structured JSON/YAML with citations) for downstream programs and translators, and print/large-print handout variants for infusion centers. Depends on nutrition-during-treatment-content-008 and nutrition-during-treatment-escalation-010.",
+  "objective": "Build a WCAG 2.2 AA-conformant static site serving the human-readable content corpus, publish the machine-readable corpus as structured JSON/YAML with full citation metadata, and produce print-friendly and large-print handout variants of each topic. Automated accessibility checks must run in CI.",
+  "acceptanceCriteria": [
+    "Static site renders the human-readable content corpus and achieves WCAG 2.2 AA conformance; automated accessibility checks (axe-core or equivalent) run in CI and pass on all pages",
+    "Machine-readable corpus published as structured JSON/YAML: each claim carries the full provenance record (source, citation, URL, reuse-mode, lastVerified, validUntil), review status, and reviewer metadata, enabling downstream translation and re-use by other programs",
+    "Print-friendly PDF/HTML variant and large-print variant produced for each topic, suitable for printing in infusion centers and patient-education offices; layout reviewed by a patient-advocate for usability",
+    "CI gates from M0/M1 (citation-coverage, license, banner-lint, escalation-lint, readability, staleness) continue to pass on the rendered output",
+    "Reviewed by the project maintainer for engineering quality and by a patient-advocate for layout, font size, and usability of print variants; sign-off recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the WCAG 2.2 AA static site, machine-readable corpus export, and print/large-print handout generation, with automated accessibility checks in CI.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-readability-006",
+  "title": "Readability (grade 8 or below) + plain-language checklist + banner/escalation lint gates",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "accessibility", "infrastructure"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Patient-facing nutrition content must be readable by people under significant stress and at varied literacy levels. The project targets Flesch-Kincaid grade 8 or below for all patient-facing text. This M1 task implements the readability check plus the banner-lint and escalation-lint gates that enforce the safety layer requirements from nutrition-during-treatment-safety-001. Depends on nutrition-during-treatment-schema-002.",
+  "objective": "Implement the readability check gate (Flesch-Kincaid grade 8 or below), produce a plain-language writing checklist for content authors, and implement banner-lint and escalation-lint CI gates. Banner-lint must fail the build if the not-medical-advice / talk-to-your-care-team banner is absent from any patient-facing content file. Escalation-lint must fail the build if any symptom or side-effect topic lacks a verified red-flag escalation block.",
+  "acceptanceCriteria": [
+    "Readability check implemented in CI: reads patient-facing content files, computes Flesch-Kincaid grade level (or equivalent), fails the build if any patient-facing page exceeds grade 8; metric reported per file and in aggregate",
+    "Plain-language writing checklist documented: active voice, short sentences, plain synonyms for medical terms, avoid jargon list — referenced in the CONTRIBUTING guide for content authors",
+    "Banner-lint gate implemented and enforced in CI: fails the build if the 'This is general education, not medical advice — talk to your oncology care team / dietitian' banner is absent from any patient-facing content file",
+    "Escalation-lint gate implemented and enforced in CI: fails the build if any content file tagged as a symptom or side-effect topic is missing a red-flag escalation block (when to contact your care team / seek emergency care)",
+    "All gates run on every PR; pnpm build && pnpm test && pnpm lint pass with a fixture corpus including one compliant and one intentionally non-compliant fixture to verify the gates fire correctly",
+    "Patient-advocate review of the readability check methodology and the plain-language checklist recorded (advocate TO BE SECURED)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the readability, banner-lint, and escalation-lint CI gates (TypeScript/ESM, pnpm), replacing the stubs from nutrition-during-treatment-schema-002, plus a plain-language writing checklist for content authors.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

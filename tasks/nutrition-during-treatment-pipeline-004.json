@@ -1,0 +1,33 @@
+{
+  "id": "nutrition-during-treatment-pipeline-004",
+  "title": "Claim-extraction/synthesis pipeline + no-source-no-claim + license check + staleness fail-safe",
+  "project": "nutrition-during-treatment",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "nutrition", "health", "infrastructure", "pipeline"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After the M0 safety policy (safety-001), schema (schema-002), and source registry (licensing-003) are merged, the M1 pipeline task implements the claim-extraction/synthesis workflow and converts the CI stub gates into enforced checks. The pipeline must handle both reproduce-allowed sources (NCI/PDQ public domain, NHS OGL) and cite-and-synthesize-only sources (ACS, ESPEN, ASCO, etc.) differently. Any LLM-assisted extraction is an authoring aid only and never substitutes for expert sign-off. Depends on nutrition-during-treatment-schema-002 and nutrition-during-treatment-licensing-003.",
+  "objective": "Implement the claim-extraction and synthesis pipeline that reads authoritative sources, extracts facts (non-copyrightable), and re-expresses them as original plain-language claims with citations. Implement the three enforced CI gates: (1) citation-coverage check that fails the build if any patient-facing claim lacks an attached source, (2) license check that fails the build if any cited source is unverified or if cite-and-synthesize-only source text is reproduced verbatim, (3) staleness fail-safe that flags or withholds claims past their validUntil date.",
+  "acceptanceCriteria": [
+    "Pipeline extracts facts from authoritative sources and re-expresses them as original plain-language claims with inline citations; for reproduce-allowed sources (NCI/PDQ, NHS OGL) limited quotation with attribution is permitted; for cite-and-synthesize-only sources no wording is copied",
+    "Citation-coverage check implemented and enforced in CI: build fails if any patient-facing claim in the content schema lacks at least one attached, license-verified source reference",
+    "License check implemented as a distinct CI gate: build fails if any cited source's reuse terms are not verified and recorded in the registry, or if text from a cite-and-synthesize-only source appears reproduced verbatim",
+    "Staleness fail-safe implemented: at build time, claims whose backing source is past validUntil are flagged (warning) or withheld (error for high-severity topics) and cannot publish until re-verified and re-signed-off with a fresh lastVerified/validUntil; a staleness test asserts no claim serves as current past its window",
+    "All three gates (citation-coverage, license, staleness) run in CI on every PR and fail the build on violation; pnpm build && pnpm test && pnpm lint pass with a fixture corpus",
+    "LLM-assisted extraction, if used, is isolated behind an agent-neutral thin client; pipeline outputs are human-reviewed before expert sign-off; no LLM output bypasses the citation and license gates"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR implementing the claim-extraction/synthesis pipeline (TypeScript/ESM, pnpm) and the enforced CI gates for citation-coverage, license verification, and staleness fail-safe, replacing the stubs from nutrition-during-treatment-schema-002.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

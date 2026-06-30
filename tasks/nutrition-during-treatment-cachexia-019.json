@@ -1,0 +1,32 @@
+{
+  "id": "nutrition-during-treatment-cachexia-019",
+  "title": "Cancer cachexia / weight-loss awareness (general, non-prescriptive)",
+  "project": "nutrition-during-treatment",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "nutrition", "health", "patient-education", "content"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Cancer cachexia and malnutrition are associated with worse treatment tolerance, more dose reductions, and worse survival — making them among the highest-stakes nutrition topics in this project. However, the management of cachexia involves individualized clinical decisions that must not be presented as general advice. This backlog topic covers general, non-prescriptive awareness: why eating enough matters, early warning signs to report to the care team, and a strong defer-to-dietitian framing. Requires oncologist review in addition to RDN/CSO review due to clinical loading. Content is education only — no personalized targets or dietary prescriptions.",
+  "objective": "Author cancer cachexia and treatment-related weight-loss awareness content at a general, non-prescriptive level: what cachexia is, why eating enough during treatment matters, warning signs to report to the care team, and a strong defer-to-oncology-dietitian message. Does not prescribe calorie targets, protein goals, oral supplements, or individualized nutrition support plans.",
+  "acceptanceCriteria": [
+    "Content explains cancer cachexia and treatment-related weight loss at a plain-language, general-awareness level; explains why maintaining adequate intake during treatment matters and what the consequences of malnutrition can include — cited to authoritative sources (NCI/PDQ, ESPEN, ASPEN, etc.)",
+    "Content includes clear warning signs to report promptly to the care team (significant unintentional weight loss, inability to eat, rapid deterioration) with a red-flag escalation block routing to the care team",
+    "Content is strictly non-prescriptive: does not prescribe calorie targets, protein or macronutrient goals, oral nutritional supplement brands or doses, or individualized nutrition support plans; all individualized decisions deferred to the oncology dietitian and team",
+    "Not-medical-advice banner present; every claim cited to a license-verified source; citation-coverage CI gate passes; content passes grade 8 or below readability check; staleness check passes",
+    "Credentialed oncologist sign-off recorded (required due to clinical loading of cachexia content); credentialed oncology RDN/CSO sign-off recorded; patient-advocate sign-off for tone and readability recorded"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A plain-language, source-cited, oncologist- and RDN/CSO-signed-off cancer cachexia awareness document, non-prescriptive and with a strong defer-to-dietitian message, merged into the content corpus and passing all CI gates.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
